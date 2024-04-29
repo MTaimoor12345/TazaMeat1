@@ -12,6 +12,7 @@ import cors from 'cors';
 import mutton from "./routes/mutton.js";
 import submit from "./routes/submit.js";
 import beef from "./routes/beef.js";
+import orderList from "./routes/orderList.js";
 import seafood from "./routes/seafood.js"
 
 
@@ -51,6 +52,7 @@ app.use("/mutton", mutton);
 app.use("/beef", beef);
 app.use("/seafood", seafood);
 app.use("/QA", QA);
+app.use("/order", orderList);
 app.use("/submit", submit);
 
 

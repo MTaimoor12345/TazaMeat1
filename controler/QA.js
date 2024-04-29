@@ -7,10 +7,11 @@ class QAcontroler {
 
     static createDoc =async(req,res)=>{
             try {
-                const {Animal,Eid,number,Address,qpdetail,quantity,totalPrice}=req.body;
+                const {Animal,Eid,CNIC,number,Address,qpdetail,quantity,totalPrice}=req.body;
                 const doc =new qpModel({
                     Animal:Animal,
                     Eid:Eid,
+                    CNIC:CNIC,
                     number:number,
                     Address:Address,
                     qpdetail:qpdetail,

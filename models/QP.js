@@ -4,6 +4,7 @@ import mongoose, { Schema } from "mongoose";
 const qpSchema = new mongoose.Schema({
     Animal:{type:String , require:true},
     Eid:{type:String , require:true},
+    CNIC:{type:String , require:true},
     number:{type:Number , require:true},
     Address:{type:String , require:true},
     qpdetail:{type:String , require:true},
