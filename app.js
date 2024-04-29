@@ -45,6 +45,7 @@ app.use("/admin/edit",express.static(join(process.cwd(),"public")));
 app.use("/mutton/edit",express.static(join(process.cwd(),"public")));
 app.use("/beef/edit",express.static(join(process.cwd(),"public")));
 app.use("/seafood/edit",express.static(join(process.cwd(),"public")));
+app.use("/order/edit",express.static(join(process.cwd(),"public")));
 app.use("/QA",express.static(join(process.cwd(),"public")));
 app.use("/admin", web);
 app.use("/test", test);

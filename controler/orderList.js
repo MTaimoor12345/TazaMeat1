@@ -46,7 +46,7 @@ class orderList {
     static editDoc = async (req,res)=>{
       try {
         const result = await qpModel.findById(req.params.id);
-        res.render("edit2",{data: result})
+        res.render("orderEdit",{data: result})
       } catch (error) {
         console.log(error)
       }
