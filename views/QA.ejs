@@ -19,20 +19,28 @@
 
 
       <div class="container mt-5">
-        <form>
+        <form action="/QA" method="post">
           <div class="row">
             <div class="col">
               <label for="Animal">Choose Animal Type:</label>
-<select id="Animal" name="Animal" required onchange="calculatePrice()">
-  <option value="Cow">Full Cow</option>
-  <option value="CowShare">Cow Share</option>
-  <option value="Goat">Goat</option>
+               <select id="Animal" name="Animal" required onchange="calculatePrice()">
+                <option value="Cow">Full Cow</option>
+                 <option value="CowShare">Cow Share</option>
+                  <option value="Goat">Goat</option>
  
-</select>
+               </select>
             </div>
+
             <div class="col">
-              <input type="text" class="form-control" placeholder="Address" required>
+              <label for="Days">Eid Days:</label>
+              <select id="Eid" name="Eid" required onchange="calculatePrice()">
+                <option value="Day1">Day 1</option>
+                <option value="Day2">Day 2</option>
+                <!-- <option value="Day3">Day 3</option> -->
+               
+              </select>
             </div>
+          
           </div>
 
 
@@ -41,16 +49,10 @@
 
           <div class="row mt-3">
             <div class="col">
-              <input type="Number" class="form-control" placeholder="Contact Number" required>
+              <input type="Number" name="number" class="form-control" placeholder="Contact Number" required>
             </div>
             <div class="col">
-              <label for="Days">Eid Days:</label>
-              <select id="Eid" name="Eid" required>
-                <option value="Day1">Day 1</option>
-                <option value="Day2">Day 2</option>
-                <option value="Day3">Day 3</option>
-               
-              </select>
+              <input type="text" name="Address" class="form-control" placeholder="Address" required>
             </div>
           </div>
 
@@ -58,19 +60,19 @@
           <div class="row mt-3">
             <div class="col">
               <label for="">Qurbani Details Names & Shares:</label>
-              <input type="text" class="form-control" placeholder="Qurbani Details Names & Shares" required>
+              <input type="text" class="form-control" name="qpdetail" placeholder="Qurbani Details Names & Shares" required>
             </div>
             <div class="col">
               <label for="">Quantity:</label>
 
-              <input type="Number" class="form-control" id="quantity" placeholder="Animal Quantity" required onchange="calculatePrice()">
+              <input type="Number" name="quantity" class="form-control" id="quantity" placeholder="Animal Quantity" required onchange="calculatePrice()">
             </div>
           </div>
           <label for="">Total Amount:</label>
-          <input type="number" readonly class="form-control" id="totalPrice">
+          <input type="number" name="totalPrice" readonly class="form-control" id="totalPrice">
           <button type="submit" class="btn btn-success mt-3">Submit</button>
 
-          </form>
+        </form>
 
 
       </div>
@@ -81,23 +83,53 @@ function calculatePrice() {
     var animal = document.getElementById("Animal").value;
    var quantity =1
    quantity = document.getElementById("quantity").value;
+   days = document.getElementById("Eid").value;
     
-    let Cow = +10;
-    let CowShare= +5;
-    let Goat= +15; 
-   if (animal == "Cow") {
+    let Cow = +224770;
+    let CowShare= +33800;
+    let Goat= +48500; 
+    let a = +3325;
+    let b = +500;
+    if (animal == "Cow" && days == "Day1") {
     let totalPrice = Cow * quantity;
+    // let cal = a * quantity;
+    // let Total = totalPrice - cal;
     console.log(totalPrice);
    
-    document.getElementById("totalPrice").value = totalPrice
-   }else if(animal == "CowShare"){
+    document.getElementById("totalPrice").value = totalPrice;
+   }
+  else if (animal == "Cow" && days == "Day2") {
+    let totalPrice = Cow * quantity;
+    let cal = a * quantity;
+    let Total = totalPrice - cal;
+    console.log(totalPrice);
+   
+    document.getElementById("totalPrice").value = Total;
+   }
+   else if(animal == "CowShare" && days == "Day1"){
     let totalPrice = CowShare * quantity;
     
    
     document.getElementById("totalPrice").value = totalPrice
-   }else if(animal == "Goat"){
+   }
+   else if(animal == "CowShare" && days == "Day2"){
+    let totalPrice = CowShare * quantity;
+    let cal = b * quantity;
+    let Total = totalPrice - cal;
+   
+    document.getElementById("totalPrice").value = Total
+   }
+
+   else if(animal == "Goat" && days == "Day1"){
     let totalPrice = Goat * quantity;
     
+   
+    document.getElementById("totalPrice").value = totalPrice
+   }
+   else if(animal == "Goat" && days == "Day2"){
+    let totalPrice = Goat * quantity;
+    let cal = b * quantity;
+    let Total = totalPrice - cal;
    
     document.getElementById("totalPrice").value = totalPrice
    }

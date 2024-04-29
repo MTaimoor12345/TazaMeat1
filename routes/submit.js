@@ -2,11 +2,11 @@ import express from "express";
 const router = express.Router();
 
 
-import QAcontroler from "../controler/QA.js";
+import submitcontroler from "../controler/submit.js";
 
 
-router.get('/',QAcontroler.getAll);
-router.post('/',QAcontroler.createDoc);
+router.get('/',submitcontroler.getAll);
+// router.post('/',QAcontroler.createDoc);
 // router.get('/edit/:id',Studentcontroler.editDoc);
 // router.post('/update/:id',Studentcontroler.updateDocById);
 // router.post('/delet/:id',Studentcontroler.deletDocById);
