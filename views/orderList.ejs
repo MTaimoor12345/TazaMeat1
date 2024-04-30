@@ -36,8 +36,8 @@
           <th scope="col"><input type="text" id="animalSearch" class=" search-input " placeholder="Search by Animal Type" ></th>
           <th scope="col"><input type="text" id="daySearch" class=" search-input " placeholder="Search by day" ></th>
           <th scope="col"><input type="text" id="CNICSearch" class=" search-input " placeholder="Search by CNIC" ></th>
-          <th scope="col"><input type="text" id="numberSearch" class=" search-input " placeholder="Search by Full Name" ></th>
-          <th scope="col"><input type="text" id="addressSearch" class=" search-input " placeholder="Search by Address" ></th>
+          <th scope="col"><input type="text" id="nameSearch" class=" search-input " placeholder="Search by Full Name" ></th>
+          <th scope="col"><input type="text" id="fnameSearch" class=" search-input " placeholder="Search by Father Name" ></th>
          
       </tr>
 
@@ -185,7 +185,7 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            const animalSearch = document.getElementById('numberSearch');
+            const animalSearch = document.getElementById('nameSearch');
             const tableBody = document.getElementById('tableBody');
             const rows = tableBody.getElementsByTagName('tr');
 
@@ -207,7 +207,7 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            const animalSearch = document.getElementById('addressSearch');
+            const animalSearch = document.getElementById('fnameSearch');
             const tableBody = document.getElementById('tableBody');
             const rows = tableBody.getElementsByTagName('tr');
 
